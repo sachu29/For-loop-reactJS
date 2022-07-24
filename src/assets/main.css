@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.primary-clr{
+    background-color: #fcd352;
+}
+.secondary-clr{
+    background-color: #f5f5f5;
+}
+.clr-blue{
+    background-color: #2fade0;
+}
+
+/* Dot */
+
+.dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 10px;
+}
+
+/* Dot */
+
+
+/* Card */
+
+.card{
+   position: relative;
+   display: inline-block;
+   min-width: 308px;
+   height: 180px; 
+   background-color: white;
+   border-radius: 20px;
+   padding: 30px 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+}
+.info{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+
+
+/* Card */
+
+
+/* Input */
+
+.process-input[type="checkbox"]{
+    position: relative;
+    width: 25px;
+    height: 13px;
+    border-radius: 10px;
+    appearance: none;
+    margin-left: 15px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
+}
+.process-input[type="checkbox"]::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 1px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fcd352;
+    transition: 0.5s;
+}
+.process-input:checked[type="checkbox"]{
+    background-color: transparent;
+    border: 1px solid #fcd352;
+}
+.process-input:checked[type="checkbox"]::before{
+    transform: translate(11px);
+}
+
+/* Input */

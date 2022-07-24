@@ -1,38 +1,303 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.primary-clr{
+  background-color: #fcd352;
+}
+.secondary-clr{
+  background-color: #f5f5f5;
+}
+.clr-blue{
+  background-color: #2fade0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dot */
+
+.dot{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Dot */
+
+
+/* Card */
+
+.card{
+ position: relative;
+ display: inline-block;
+ min-width: 308px;
+ height: 180px; 
+ background-color: white;
+ border-radius: 20px;
+ padding: 30px 20px;
+ margin-right: 20px;
+ margin-bottom: 20px;
+}
+.info{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+
+
+/* Card */
+
+
+/* Input */
+
+.process-input[type="checkbox"]{
+  position: relative;
+  width: 25px;
+  height: 13px;
+  border-radius: 10px;
+  appearance: none;
+  margin-left: 15px;
+  border: 1px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+.process-input[type="checkbox"]::before{
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 1px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fcd352;
+  transition: 0.5s;
+}
+.process-input:checked[type="checkbox"]{
+  background-color: transparent;
+  border: 1px solid #fcd352;
+}
+.process-input:checked[type="checkbox"]::before{
+  transform: translate(11px);
+}
+
+/* Input */
+
+
+.dashboard{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.left-aside{
+  width: 16vw;
+  padding: 30px 0 30px 30px;
+}
+.left-aside img{
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+.menu{
+  cursor: pointer;
+}
+.menu li {
+  position: relative;
+  padding: 5px 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.menu li::before{
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  padding: 3px;
+  top: 8px;
+  left: -15px;
+  background: #fcd352;
+  margin-right: 10px;
+  transform: rotate(45deg);
+  display: none;
+}
+.menu li:hover::before{
+  display: block;
+  transition: 0.5s;
+}
+.menu li:hover{
+  color: #251b7f;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.top{
+  margin-bottom: 30px;
+}
+.profile-bar{
+  width: 250px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: white;
+  padding: 10px 40px;
+  border-radius: 0 0 15px 15px;
+}
+.profile-image{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.profile-image li{
+  margin-right: 20px;
+  cursor: pointer;
+}
+.profile-image li:last-child{
+  margin-right: 0;
+}
+main{
+  width: 84vw;
+  height: 100%;
+  background: #f5f5f5;
+  padding: 30px 80px 20px 30px;
+}
+
+/* PROCESS TAB */
+
+.process-tab{
+  display: flex;
   color: white;
+  background: #1f4772;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.process-tab div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.process-tab div:nth-child(1){
+  width: 20%;
+  padding-right: 50px;
+}
+.process-tab div:nth-child(2){
+  width: 40%;
+  border-right: 1px solid white;
+  margin-right: 15px;
+}
+.process-tab div:nth-child(2) .manual{
+  border-right: 1px solid white;
+  padding-right: 15px;
+  margin-right: 15px;
+}
+.process-tab div:nth-child(3){
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  
+}
+.process-tab div ul{
+  display: flex;
+}
+.process-tab div li{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* PROCESS TAB */
+
+/* Progress Card */
+.tat{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  height: 22px;
+  display: flex;
+  background: #f4f6fb;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.blue-bar{
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+  border: 1px solid #8888ba;
+  border-radius: 5px;
+
+}
+.progress{
+  display: inline-block;
+  width: 50%;
+  border-radius: 5px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Progress Card */
+
+/* Progress  Card Big*/
+
+.count{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 22px;
+  display: flex;
+  background: #f4f6fb;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+.yellow-bar{
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+  border: 1px solid #fcd352;
+  border-radius: 5px;
+}
+.progress-big{
+  display: inline-block;
+  width: 80%;
+  border-radius: 5px;
+
+}
+
+/* Progress  Card Big*/
+
+.card-section{
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+
+.status{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timer{
+  margin-right: 5px;
+}
+
+.graph{
+  margin-right: 5px;
 }
